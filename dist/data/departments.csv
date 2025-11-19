@@ -1,0 +1,103 @@
+NAME,CODE,REGION,CAPITAL,AREA_KM2,POPULATION,POPULATION_DENSITY_KM2,NUM_CLIMBS,TOTAL_LENGTH_KM,AVG_LENGTH_KM,AVG_GRADE_PERCENT,AVG_ALTITUDE_M,NUM_HC,NUM_CAT_1,NUM_CAT_2,NUM_CAT_3,NUM_CAT_4,NUM_STARTS,NUM_ENDS,NUM_YELLOW_JERSEY_WINNERS
+Ain,FR-01, 	Auvergne - Rhône - Alpes, 	Bourg-en-Bresse, 	5 778.5, 	679 498, 	117.6,4,45.00000000000001,11.250000000000002,6.9,1160.5,2,1,0,0,1,12,17,3
+Aisne,FR-02, 	Hauts-de-France, 	Laon, 	7 418.4, 	521 632, 	70.3,0,0.0,0.0,0.0,0.0,0,0,0,0,0,11,5,0
+Allier,FR-03, 	Auvergne - Rhône - Alpes, 	Moulins, 	7 365.3, 	332 708, 	45.2,0,0.0,0.0,0.0,0.0,0,0,0,0,0,3,6,0
+Alpes-de-Haute-Provence,FR-04, 	Provence - Alpes - Côte d'Azur, 	Digne-les-Bains, 	6 994.1, 	168 161, 	24.0,6,19.1,3.1833333333333336,5.583333333333333,545.6666666666666,0,0,1,0,2,13,15,3
+Alpes-Maritimes,FR-06, 	Provence - Alpes - Côte d'Azur, 	Nice, 	4 295.0, 	1 119 571, 	260.7,17,169.6,9.976470588235294,6.358823529411765,996.7058823529412,1,4,2,1,1,57,56,13
+Ardèche,FR-07, 	Auvergne - Rhône - Alpes, 	Privas, 	5 560.5, 	336 501, 	60.5,1,5.6,5.6,4.6,981.0,0,0,0,0,0,7,9,2
+Ardennes,FR-08, 	Grand Est, 	Charleville-Mézières, 	5 250.3, 	265 737, 	50.6,0,0.0,0.0,0.0,0.0,0,0,0,0,0,13,14,1
+Ariège,FR-09, 	Occitanie, 	Foix, 	4 921.5, 	155 813, 	31.7,11,109.0,9.909090909090908,7.0181818181818185,983.818181818182,1,4,3,0,0,20,24,3
+Aube,FR-10, 	Grand Est, 	Troyes, 	6 022.3, 	312 730, 	51.9,1,2.8,2.8,4.3,360.0,0,0,0,0,1,4,7,0
+Aude,FR-11, 	Occitanie, 	Carcassonne, 	6 354.6, 	378 775, 	59.6,3,13.0,4.333333333333333,5.8,623.0,0,0,1,2,0,22,17,0
+Aveyron,FR-12, 	Occitanie, 	Rodez, 	8 770.1, 	279 470, 	31.9,2,15.9,7.95,5.55,521.0,0,0,0,1,1,9,7,0
+Bas-Rhin,FR-67, 	Grand Est, 	Strasbourg, 	4 795.5, 	1 170 551, 	244.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,27,21,5
+Bouches-du-Rhône,FR-13, 	Provence - Alpes - Côte d'Azur, 	Marseille, 	5 098.2, 	2 078 397, 	407.7,2,4.199999999999999,2.1,7.15,514.5,0,0,0,2,0,40,39,2
+Calvados,FR-14, 	Normandie, 	Caen, 	5 592.2, 	706 605, 	126.4,1,0.75,0.75,8.9,166.0,0,0,0,0,0,32,38,6
+Cantal,FR-15, 	Auvergne - Rhône - Alpes, 	Aurillac, 	5 767.2, 	143 567, 	24.9,8,33.7,4.2125,7.3375,1128.5,0,1,3,2,0,9,8,0
+Charente,FR-16, 	Nouvelle-Aquitaine, 	Angoulême, 	5 964.0, 	349 856, 	58.7,0,0.0,0.0,0.0,0.0,0,0,0,0,0,4,2,0
+Charente-Maritime,FR-17, 	Nouvelle-Aquitaine, 	La Rochelle, 	6 898.6, 	674 439, 	97.8,0,0.0,0.0,0.0,0.0,0,0,0,0,0,44,39,5
+Cher,FR-18, 	Centre - Val de Loire, 	Bourges, 	7 293.0, 	295 729, 	40.5,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,3,0
+Corrèze,FR-19, 	Nouvelle-Aquitaine, 	Tulle, 	5 889.8, 	238 962, 	40.6,2,5.7,2.85,6.4,572.0,0,0,1,0,1,10,12,2
+Corse-du-Sud,FR-2A, 	Corse [Korsika], 	Ajaccio, 	4 037.5, 	167 658, 	41.5,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,1,1
+Côte-d'Or,FR-21, 	Bourgogne - Franche-Comté [Burgund], 	Dijon, 	8 787.5, 	537 752, 	61.2,7,21.700000000000003,3.1000000000000005,5.6000000000000005,531.1428571428571,0,0,0,4,2,15,18,3
+Côtes-d'Armor,FR-22, 	Bretagne, 	Saint-Brieuc, 	6 982.9, 	611 351, 	87.5,8,14.5,1.8125,5.7375,206.25,0,0,0,4,4,17,21,7
+Creuse,FR-23, 	Nouvelle-Aquitaine, 	Guéret, 	5 589.6, 	113 922, 	20.4,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,2,1
+Deux-Sèvres,FR-79, 	Nouvelle-Aquitaine, 	Niort, 	6 028.9, 	373 682, 	62.0,1,3.3,3.3,7.7,1288.0,0,0,1,0,0,11,12,2
+Dordogne,FR-24, 	Nouvelle-Aquitaine, 	Périgueux, 	9 204.7, 	413 192, 	44.9,0,0.0,0.0,0.0,0.0,0,0,0,0,0,9,9,1
+Doubs,FR-25, 	Bourgogne - Franche-Comté [Burgund], 	Besançon, 	5 237.4, 	552 321, 	105.5,2,5.300000000000001,2.6500000000000004,5.3,413.5,0,0,0,0,1,22,23,2
+Drôme,FR-26, 	Auvergne - Rhône - Alpes, 	Valence, 	6 553.8, 	524 109, 	80.0,2,7.0,3.5,4.85,677.0,0,0,0,1,1,9,6,0
+Essonne,FR-91, 	Île-de-France, 	Évry, 	1 818.5, 	1 331 827, 	732.4,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,2,0
+Eure,FR-27, 	Normandie, 	Évreux, 	6 034.4, 	598 339, 	99.2,2,4.5,2.25,4.3,96.5,0,0,0,0,2,6,7,0
+Eure-et-Loir,FR-28, 	Centre - Val de Loire, 	Chartres, 	5 927.3, 	430 422, 	72.6,0,0.0,0.0,0.0,0.0,0,0,0,0,0,4,3,1
+Finistère,FR-29, 	Bretagne, 	Quimper, 	6 760.4, 	931 604, 	137.8,0,0.0,0.0,0.0,0.0,0,0,0,0,0,36,36,4
+Gard,FR-30, 	Occitanie, 	Nîmes, 	5 875.4, 	766 765, 	130.5,2,17.6,8.8,6.15,953.0,0,0,0,0,0,17,19,0
+Gers,FR-32, 	Occitanie, 	Auch, 	6 303.6, 	193 695, 	30.7,1,2.1,2.1,3.2,217.0,0,0,0,0,1,27,20,4
+Gironde,FR-33, 	Nouvelle-Aquitaine, 	Bordeaux, 	10 168.6, 	1 707 780, 	167.9,0,0.0,0.0,0.0,0.0,0,0,0,0,0,68,79,7
+Haut-Rhin,FR-68, 	Grand Est, 	Colmar, 	3 527.4, 	187 870, 	53.3,6,55.0,9.166666666666666,6.7,584.6666666666666,0,2,1,0,0,16,22,3
+Haute-Corse,FR-2B, 	Corse [Korsika], 	Bastia, 	4 722.3, 	1 487 804, 	315.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,9,8,2
+Haute-Garonne,FR-31, 	Occitanie, 	Toulouse, 	6365.1, 	226 900, 	35.6,14,82.5,5.892857142857143,6.721428571428572,950.4285714285714,2,5,2,0,2,102,99,13
+Haute-Loire,FR-43, 	Auvergne - Rhône - Alpes, 	Le Puy-en-Velay, 	4 997.7, 	168 200, 	33.7,1,5.8,5.8,5.3,832.0,0,0,0,1,0,2,3,0
+Haute-Marne,FR-52, 	Grand Est, 	Chaumont, 	6 249.9, 	141 661, 	22.7,1,1.2,1.2,7.8,391.0,0,0,0,0,1,3,5,0
+Haute-Saône,FR-70, 	Bourgogne - Franche-Comté [Burgund], 	Vesoul, 	5 382.3, 	232 523, 	43.2,3,17.5,5.833333333333333,8.9,760.0,0,1,0,0,0,3,6,3
+Haute-Savoie,FR-74, 	Auvergne - Rhône - Alpes, 	Annecy, 	4 591.9, 	866 490, 	188.7,17,134.9,7.935294117647059,6.576470588235295,1200.529411764706,1,11,0,3,2,61,63,6
+Haute-Vienne,FR-87, 	Nouvelle-Aquitaine, 	Limoges, 	5 547.4, 	232 534, 	41.9,0,0.0,0.0,0.0,0.0,0,0,0,0,0,7,12,1
+Hautes-Alpes,FR-05, 	Provence - Alpes - Côte d'Azur, 	Gap, 	5 685.6, 	370 339, 	65.1,23,218.6,9.504347826086956,6.108695652173913,1282.0434782608695,5,1,2,6,0,67,67,12
+Hautes-Pyrénées,FR-65, 	Occitanie, 	Tarbes, 	4 528.8, 	769 047, 	169.8,26,297.40000000000003,11.43846153846154,7.411538461538462,1459.1538461538462,9,10,3,1,0,36,55,10
+Hauts-de-Seine,FR-92, 	Île-de-France, 	Nanterre, 	175.6, 	1 651 407, 	9 404.4,2,2.0,1.0,6.800000000000001,170.5,0,0,0,0,2,4,2,1
+Hérault,FR-34, 	Occitanie, 	Montpellier, 	6 234.5, 	1 243 225, 	199.4,1,2.0,2.0,7.3,356.0,0,0,0,0,0,35,37,3
+Ille-et-Vilaine,FR-35, 	Bretagne, 	Rennes, 	6 832.0, 	1 127 720, 	165.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,34,28,1
+Indre,FR-36, 	Centre - Val de Loire, 	Châteauroux, 	6 886.6, 	213 871, 	31.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,3,5,1
+Indre-et-Loire,FR-37, 	Centre - Val de Loire, 	Tours, 	6 146.9, 	616 751, 	100.3,0,0.0,0.0,0.0,0.0,0,0,0,0,0,28,28,3
+Isère,FR-38, 	Auvergne - Rhône - Alpes, 	Grenoble, 	7 868.2, 	1 307 146, 	166.1,7,39.7,5.671428571428572,6.457142857142856,956.1428571428572,1,0,2,1,2,80,83,13
+Jura,FR-39, 	Bourgogne - Franche-Comté [Burgund], 	Lons-le-Saunier, 	5 032.8, 	257 483, 	51.2,3,21.3,7.099999999999999,5.8,797.0,0,0,1,1,1,9,6,1
+Landes,FR-40, 	Nouvelle-Aquitaine, 	Mont-de-Marsan, 	9 352.7, 	434 933, 	46.5,0,0.0,0.0,0.0,0.0,0,0,0,0,0,9,1,1
+Loir-et-Cher,FR-41, 	Centre - Val de Loire, 	Blois, 	6 411.8, 	775 102, 	120.9,1,3.1,3.1,7.1,0.0,0,0,0,0,0,2,2,1
+Loire,FR-42, 	Auvergne - Rhône - Alpes, 	Saint-Étienne, 	4 796.4, 	1 503 876, 	313.5,2,5.8,2.9,5.75,935.0,0,0,0,2,0,26,29,4
+Loire-Atlantique,FR-44, 	Pays de la Loire, 	Nantes, 	6 996.9, 	689 581, 	98.6,0,0.0,0.0,0.0,0.0,0,0,0,0,0,38,37,8
+Loiret,FR-45, 	Centre - Val de Loire, 	Orléans, 	6 804.2, 	326 941, 	48.0,0,0.0,0.0,0.0,0.0,0,0,0,0,0,16,14,4
+Lot,FR-46, 	Occitanie, 	Cahors, 	5 221.9, 	175 800, 	33.7,2,4.4,2.2,5.7,301.0,0,0,0,0,2,3,4,0
+Lot-et-Garonne,FR-47, 	Nouvelle-Aquitaine, 	Agen, 	5 382.6, 	330 385, 	61.4,0,0.0,0.0,0.0,0.0,0,0,0,0,0,5,4,0
+Lozère,FR-48, 	Occitanie, 	Mende, 	5 172.1, 	76 647, 	14.8,1,2.9,2.9,10.4,1050.0,0,0,1,0,0,2,5,0
+Maine-et-Loire,FR-49, 	Pays de la Loire, 	Angers, 	7 160.2, 	834 135, 	116.5,0,0.0,0.0,0.0,0.0,0,0,0,0,0,20,21,3
+Manche,FR-50, 	Normandie, 	Saint-Lô, 	6 018.5, 	494 200, 	82.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,24,20,4
+Marne,FR-51, 	Grand Est, 	Châlons-en-Champagne, 	8 196.6, 	562 874, 	68.7,2,1.8,0.9,11.15,0.0,0,0,0,0,0,16,9,2
+Mayenne,FR-53, 	Pays de la Loire, 	Laval, 	5 207.9, 	304 981, 	58.6,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,4,0
+Meurthe-et-Moselle,FR-54, 	Grand Est, 	Nancy, 	5 283.5, 	730 320, 	138.2,3,5.6000000000000005,1.866666666666667,6.633333333333333,212.0,0,0,0,1,1,19,20,5
+Meuse,FR-55, 	Grand Est, 	Bar-le-Duc, 	6 234.6, 	178 562, 	28.6,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,3,1
+Morbihan,FR-56, 	Bretagne, 	Vannes, 	6 832.5, 	782 348, 	114.5,1,1.8,1.8,5.7,150.0,0,0,0,0,1,24,23,2
+Moselle,FR-57, 	Grand Est, 	Metz, 	6 253.5, 	1 055 259, 	168.7,0,0.0,0.0,0.0,0.0,0,0,0,0,0,37,38,5
+Nièvre,FR-58, 	Bourgogne - Franche-Comté [Burgund], 	Nevers, 	6 863.2, 	198 936, 	29.0,0,0.0,0.0,0.0,0.0,0,0,0,0,0,1,4,0
+Nord,FR-59, 	Hauts-de-France, 	Lille, 	5 767.7, 	2 614 334, 	453.3,4,7.5,1.875,4.25,133.25,0,0,0,0,3,61,52,7
+Oise,FR-60, 	Hauts-de-France, 	Beauvais, 	5 894.3, 	830 176, 	140.8,1,3.2,3.2,5.3,177.0,0,0,0,1,0,4,3,0
+Orne,FR-61, 	Normandie, 	Alençon, 	6 177.2, 	272 379, 	44.1,1,4.3,4.3,4.0,220.0,0,0,0,0,0,6,6,0
+Paris,FR-75C, 	Île-de-France, 	Paris, 	105.3, 	2 087 577, 	19 825.0,3,3.0,1.0,4.8,118.0,0,0,0,0,3,0,0,0
+Pas-de-Calais,FR-62, 	Hauts-de-France, 	Arras, 	6 715.0, 	1 455 555, 	216.8,1,0.8,0.8,8.0,80.0,0,0,0,0,1,18,20,5
+Puy-de-Dôme,FR-63, 	Auvergne - Rhône - Alpes, 	Clermont-Ferrand, 	8 001.5, 	665 094, 	83.1,18,102.2,5.677777777777778,5.900000000000001,1098.888888888889,1,1,6,7,0,26,27,2
+Pyrénées-Atlantiques,FR-64, 	Nouvelle-Aquitaine, 	Pau, 	7 696.4, 	706 361, 	91.8,6,52.7,8.783333333333333,7.466666666666668,1092.1666666666667,1,3,0,2,0,108,101,12
+Pyrénées-Orientales,FR-66, 	Occitanie, 	Perpignan, 	4 150.4, 	497 810, 	119.9,1,5.8,5.8,4.6,1914.0,0,0,1,0,0,40,34,4
+Rhône,FR-69, 	Auvergne - Rhône - Alpes, 	Lyon, 	2 715.5, 	1 926 989, 	709.6,8,39.400000000000006,4.925000000000001,6.825,410.375,0,0,2,3,0,1,2,1
+Métropole de Lyon,FR-69M, 	Auvergne - Rhône - Alpes, 	Lyon, 	533.0, 	1 400 000, 	2 626.6,1,1.4,1.4,4.5,236.0,0,0,0,0,1,17,16,5
+Saône-et-Loire,FR-71, 	Bourgogne - Franche-Comté [Burgund], 	Mâcon, 	8 598.5, 	546 695, 	63.6,2,7.4,3.7,5.75,510.5,0,0,1,0,1,7,8,0
+Sarthe,FR-72, 	Pays de la Loire, 	Le Mans, 	6 238.0, 	566 096, 	90.7,0,0.0,0.0,0.0,0.0,0,0,0,0,0,8,8,1
+Savoie,FR-73, 	Auvergne - Rhône - Alpes, 	Chambéry, 	6 261.3, 	451 819, 	72.2,26,389.5,14.98076923076923,6.342307692307693,1630.7307692307693,11,6,3,1,2,55,49,9
+Seine-et-Marne,FR-77, 	Île-de-France, 	Melun, 	5 924.1, 	1 464 783, 	247.3,0,0.0,0.0,0.0,0.0,0,0,0,0,0,4,6,0
+Seine-Maritime,FR-76, 	Normandie, 	Rouen, 	6 326.9, 	1 255 554, 	198.4,2,2.1,1.05,9.3,135.5,0,0,0,1,1,42,33,5
+Seine-Saint-Denis,FR-93, 	Île-de-France, 	Bobigny, 	236.8, 	1 701 072, 	7 183.6,1,4.4,4.4,4.0,561.0,0,0,0,0,1,2,4,1
+Somme,FR-80, 	Hauts-de-France, 	Amiens, 	6 206.8, 	562 126, 	90.6,0,0.0,0.0,0.0,0.0,0,0,0,0,0,12,9,2
+Tarn,FR-81, 	Occitanie, 	Albi, 	5 784.1, 	398 772, 	68.9,3,9.1,3.033333333333333,6.0,203.3333333333333,0,0,1,0,0,10,13,0
+Tarn-et-Garonne,FR-82, 	Occitanie, 	Montauban, 	3 730.2, 	267 619, 	71.7,1,4.3,4.3,5.8,1431.0,0,0,0,1,0,3,5,0
+Territoire de Belfort,FR-90, 	Bourgogne - Franche-Comté [Burgund], 	Belfort, 	610.3, 	137 235, 	224.9,0,0.0,0.0,0.0,0.0,0,0,0,0,0,30,22,3
+Val-d'Oise,FR-95, 	Île-de-France, 	Pontoise / Cergy, 	1 253.2, 	1 433 927, 	1 144.2,0,0.0,0.0,0.0,0.0,0,0,0,0,0,2,1,0
+Val-de-Marne,FR-94, 	Île-de-France, 	Créteil, 	244.9, 	1 275 704, 	5 209.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,5,7,2
+Var,FR-83, 	Provence - Alpes - Côte d'Azur, 	Toulon, 	6 037.7, 	1 121 506, 	185.8,0,0.0,0.0,0.0,0.0,0,0,0,0,0,14,14,0
+Vaucluse,FR-84, 	Provence - Alpes - Côte d'Azur, 	Avignon, 	3 578.1, 	568 715, 	158.9,5,65.1,13.02,6.619999999999999,1384.0,2,2,0,0,1,18,17,4
+Vendée,FR-85, 	Pays de la Loire, 	La Roche-sur-Yon, 	6 760.6, 	717 301, 	106.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,19,17,7
+Vienne,FR-86, 	Nouvelle-Aquitaine, 	Poitiers, 	7 025.9, 	440 921, 	62.8,0,0.0,0.0,0.0,0.0,0,0,0,0,0,13,13,2
+Vosges,FR-88, 	Grand Est, 	Épinal, 	5 891.4, 	355 431, 	60.3,5,19.200000000000003,3.8400000000000007,6.159999999999999,725.8,0,0,2,2,0,12,9,1
+Yonne,FR-89, 	Bourgogne - Franche-Comté [Burgund], 	Auxerre, 	7 451.2, 	328 774, 	44.1,0,0.0,0.0,0.0,0.0,0,0,0,0,0,11,8,2
+Yvelines,FR-78, 	Île-de-France, 	Versailles, 	2 306.2, 	1 473 664, 	639.0,2,3.6,1.7999999999999998,5.1,160.0,0,0,0,0,2,5,16,4
+Guadeloupe,FR-971,Guadeloupe,Basse-Terre,,,,0,0.0,0.0,0.0,0.0,0,0,0,0,0,0,0,0
+Martinique,FR-972,Martinique,Fort-de-France,,,,0,0.0,0.0,0.0,0.0,0,0,0,0,0,0,0,0
+Guyane,FR-973,French Guiana,Cayenne,,,,0,0.0,0.0,0.0,0.0,0,0,0,0,0,0,0,0
+La Réunion,FR-974,Réunion,Saint-Denis,,,,0,0.0,0.0,0.0,0.0,0,0,0,0,0,0,0,0
+Mayotte,FR-976,Mayotte,Mamoudzou,,,,0,0.0,0.0,0.0,0.0,0,0,0,0,0,0,0,0

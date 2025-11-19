@@ -1,0 +1,101 @@
+* { /*disable padding and margin by default and allow manual control*/
+  padding: 0pt;
+  margin: 0pt;
+}
+#container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300pt 1fr;
+  grid-template-rows: 18pt 1fr 1fr 18pt;
+
+  grid-template-areas:
+    "header header"
+    "distributionVis multivariateVis"
+    "clusterVis geoVis"
+    "footer footer";
+}
+
+#header {
+  grid-area: header;
+  background-color: #f0ffff;
+}
+#distributionVis {
+  grid-area: distributionVis;
+  background-color: #e6ffff;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+#multivariateVis {
+  grid-area: multivariateVis;
+  background-color: #ccffff;
+}
+#clusterVis {
+  grid-area: clusterVis;
+  background-color: #b3ffff;
+}
+#geoVis {
+  grid-area: geoVis;
+  background-color: #99ffff;
+}
+#footer {
+  grid-area: footer;
+  background-color: #80ffff;
+}
+
+
+.outline {
+  border: solid;
+  border-width: 2px;
+  padding:2px;
+  
+}
+
+.centerTextHorizontal {
+  text-align: center;
+}
+.centerTextVertical {
+  display:flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */}
+.boldText {
+  font-weight: bold;
+}
+
+#geoVis {
+  grid-area: geoVis;
+  background-color: #99ffff;
+  position: relative; /* Important for tooltip positioning */
+}
+
+/* Ensure the SVG takes the full container */
+#geoVis svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#tooltip {
+  display: none; /* Initially hidden*/
+  position: absolute; /* Make sure it can be positioned easily */
+  z-index: 1070; /* ensure it's above other elements */
+  /* Styling for the tooltip*/
+  background-color: white;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  pointer-events: none;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.department {
+  cursor: pointer;
+}
+
+.department:hover {
+  stroke: #333;
+  stroke-width: 1.5;
+}
