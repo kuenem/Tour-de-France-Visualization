@@ -1,0 +1,61 @@
+STAGE_NUMBER,YEAR,NAME,DISTANCE,AVERAGE_SLOPE,INITIAL_ALTITUDE,STARTING_AT_KM,CATEGORY,lat,long,COUNTRY,DEPARTMENT,DEPARTMENT_ID
+[11],2021,Mont Ventoux,22.0,4.9,1882,76,1,44.1739649,5.2783976,France,Vaucluse,FR-84
+[9],2021,Montée de Tignes,20.8,5.5,2083,2,1,45.4977526,6.9341838,France,Savoy,FR-73
+[18],2021,Col du Tourmalet,17.0,7.4,2108,36,0,42.9083745,0.1452684,France,Hautes Pyrenees,FR-65
+[17],2021,Col du Portet,16.4,8.6,2209,0,0,42.8338264,0.2345899,France,Hautes Pyrenees,FR-65
+[11],2021,Mont Ventoux,15.8,7.5,1882,22,0,44.1739649,5.2783976,France,Vaucluse,FR-84
+[18],2021,Luz Ardiden,13.4,7.5,1720,0,0,42.8850872,-0.058821,France,Hautes Pyrenees,FR-65
+[17],2021,Col de Peyresourde,13.3,6.9,1571,49,1,42.8023062,0.463075,France,Hautes Pyrenees,FR-65
+[16],2021,Col de la Core,13.0,6.6,1395,68,1,42.8589029,1.1049936,France,Ariège,FR-09
+[9],2021,Col du Pré,12.5,7.9,1730,64,0,45.6903011,6.5979747,France,Savoy,FR-73
+[16],2021,Col de Port,11.4,5.5,1255,115,2,42.8990906,1.4527628,France,Ariège,FR-09
+[15],2021,Port d'Envalira,10.8,5.8,2406,45,1,42.5401763,1.719381,Andorra,,
+[9],2021,Col des Saisies,9.4,6.2,1648,95,1,45.7615643,6.5333569,France,Savoy,FR-73
+[11],2021,Col de la Liguière,9.2,6.6,982,115,1,43.9935285,5.3893188,France,Vaucluse,FR-84
+[8],2021,Col de Romme,8.8,8.9,1292,29,1,46.0300458,6.5745849,France,Haute-Savoie,FR-74
+[15],2021,Montée de Mont-Louis,8.5,5.7,1563,105,1,42.5096936,2.1208774,France,Pyrénées-Orientales,FR-66
+[10],2021,Col de Couz,7.5,2.8,620,132,4,45.4691347,5.816869,France,Savoy,FR-73
+[8],2021,Col de la Colombière,7.5,8.4,1605,15,1,45.9922392,6.475685,France,Haute-Savoie,FR-74
+[17],2021,Col de Val Louron-Azet,6.8,7.9,1533,29,1,42.7918785,0.3809508,France,Hautes Pyrenees,FR-65
+[14],2021,Col de la Croix des Morts,6.8,5.8,902,73,2,42.8768546,1.9715234,France,Ariège,FR-09
+[8],2021,Côte de Copponex,6.7,4.6,731,89,3,46.0370555,6.0351865,France,Haute-Savoie,FR-74
+[15],2021,Col de Beixalis,6.2,8.6,1797,15,1,42.5277506,1.5479101,Andorra,,
+[8],2021,Côte de Mont-Saxonnex,6.1,8.1,957,47,1,46.0239771,6.4768111,France,Haute-Savoie,FR-74
+[9],2021,Cormet de Roselend,5.9,6.6,1971,52,2,45.6913293,6.6906249,France,Savoy,FR-73
+[15],2021,Col de Puymorens,5.8,4.6,1914,58,2,42.5596188,1.8108423,France,Pyrénées-Orientales,FR-66
+[7],2021,Signal d'Uchon,5.7,5.5,633,18,2,46.8060385,4.2591478,France,Saône-et-Loire,FR-71
+[13],2021,Côte du Pic Saint-Loup,5.5,3.7,304,168,4,43.7701233,3.8110741,France,Hérault,FR-34
+[16],2021,Col de Portet-d'Aspet,5.4,6.7,1066,32,2,42.9447507,0.8537083,France,Haute-Garonne,FR-31
+[7],2021,Côte de la Croix de la Libération,4.7,5.3,575,35,3,46.9282050,4.2917618,France,Saône-et-Loire,FR-71
+[14],2021,Col de Saint-Louis,4.6,6.8,705,17,2,42.8373826,2.3275602,France,Aude,FR-11
+[12],2021,Côte du belvédère de Tharaux,4.5,4.8,327,76,3,44.2297593,4.3178168,France,Gard,FR-30
+[14],2021,Col de Montségur,4.3,8.1,1046,95,2,42.8740525,1.8245122,France,Ariège,FR-09
+[14],2021,Col du Bac,3.2,5.4,623,133,3,42.9980719,2.0532924,France,Aude,FR-11
+[1],2021,Côte de la Fosse aux Loups,3.2,5.3,177,0,3,49.2620258,3.0032404,France,Oise,FR-60
+[7],2021,Côte de Château-Chinon,3.2,5.2,533,88,3,47.0643977,3.9330028,France,Nièvre,FR-58
+[1],2021,Côte de Rosnoën,3.0,3.9,146,171,4,48.2639592,-4.1954004,France,Finistère,FR-29
+[8],2021,Côte de Menthonnex-en-Bornes,2.7,4.6,807,78,4,46.0529923,6.1728917,France,Haute-Savoie,FR-74
+[9],2021,Côte de Domancy,2.6,8.8,797,125,2,45.9126189,6.6490124,France,Haute-Savoie,FR-74
+[18],2021,Côte de Notre-Dame de Piétat,2.6,5.4,367,119,4,43.2217440,-0.3381991,France,Pyrénées-Atlantiques,FR-64
+[7],2021,Côte de Glux-en-Glenne,2.6,4.0,735,71,4, 46.9563755,4.0317518,France,Nièvre,FR-58
+[11],2021,Côte de Gordes,2.5,5.4,343,155,4,43.9110641,5.2002043,France,Vaucluse,FR-84
+[1],2021,Côte de Saint-Rivoal,2.5,3.6,256,47,4,48.3491022,-3.9964857,France,Finistère,FR-29
+[7],2021,Côte de la Gourloye,2.5,5.1,457,8,4,46.8046864,4.3388969,France,Saône-et-Loire,FR-71
+[14],2021,Côte de Galinagues,2.2,7.9,944,57,3,42.8080970,2.0454089,France,Aude,FR-11
+[6],2021,Côte de Saint-Aignan,2.2,2.6,129,88,4,43.6948829,7.2934569,France,Maritime Alps,FR-06
+[3],2021,Côte de Pluméliau,2.2,3.0,120,34,4,47.9577478,-2.9731190,France,Morbihan,FR-56
+[2],2021,Côte de Pordic,2.2,3.1,81,80,4,48.5751265,-2.8611188,France,Côtes-d'Armor,FR-22
+[2],2021,Mûr-de-Bretagne,2.0,6.8,288,0,3,48.1960984,-2.9826183,France,Côtes-d'Armor,FR-22
+[2],2021,Mûr-de-Bretagne,2.0,6.8,288,15,3,48.1960984,-2.9826183,France,Côtes-d'Armor,FR-22
+[18],2021,Côte de Loucrup,2.0,6.7,527,75,4,43.1187728,0.0711009,France,Hautes Pyrenees,FR-65
+[1],2021,Côte de Stang ar Garront,2.0,3.4,79,83,4,48.2105903,-4.0629768,Frane,Finistère,FR-29
+[21],2021,Côte des Grès,1.9,5.1,165,101,4,46.4578796,-72.7648278,Canada,Maskinongé (MRC),
+[19],2021,Côte de Bareille,1.9,4.9,205,195,4,43.1245707,0.6821531,France,Haute-Garonne,FR-31
+[11],2021,Côte de Fontaine-de-Vaucluse,1.9,5.7,191,167,4,43.9221229,5.1272914,France,Vaucluse,FR-84
+[3],2021,Côte de Cadoudal,1.8,5.7,150,92,4,47.8326259,-2.6529945,France,Morbihan,FR-56
+[2],2021,Côte du village de Mûr-de-Bretagne,1.7,4.0,178,18,4,48.1960984,-2.9826183,France,Côtes-d'Armor,FR-22
+[2],2021,Côte de Saint-Brieuc,1.0,7.1,84,68,4,48.2386159,-2.558924,France,Côtes-d'Armor,FR-22
+[1],2021,Côte de Trébéollin,1.0,4.1,84,189,4,48.3766216,-4.2865908,France,Finistère,FR-29
+[2],2021,Côte de Sainte-Barbe,0.9,5.2,67,111,4,49.1656542,1.3132775,France,Eure,FR-27
+[16],2021,Côte d'Aspret-Sarrat,0.9,6.3,467,7,4,43.0671000,0.7174620,France,Haute-Garonne,FR-31
+[1],2021,Côte de Locronan,0.9,9.3,192,136,3,48.0984894,-4.2077026,France,Finistère,FR-29

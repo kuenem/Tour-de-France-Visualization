@@ -9,16 +9,21 @@ let departmentData: Department[];
 
 startUp();
 
+const sharedState = {
+  highlightedDepartments: new Set<string>(),
+  onHighlightChange: (departmentCodes: string[]) => {}
+};
+
 async function startUp(): Promise<void> {
   // Wait for the data to be loaded
   departmentData = await loadDepartmentData();
   
   // Create parallel coordinates plot
-  createParallelCoordinates(departmentData, "#multivariateVis");
+  createParallelCoordinates(departmentData, "#multivariateVis", sharedState);
 
   // Create map visualization
   // createMapVisualization(departmentData, "#geoVis");
-  createInteractiveMap(departmentData, "#geoVis");
+  createInteractiveMap(departmentData, "#geoVis", sharedState);
 }
 
 // Loads the Tour de France department data

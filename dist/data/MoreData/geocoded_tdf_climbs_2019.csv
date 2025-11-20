@@ -1,0 +1,64 @@
+STAGE_NUMBER,YEAR,NAME,DISTANCE,AVERAGE_SLOPE,INITIAL_ALTITUDE,STARTING_AT_KM,CATEGORY,lat,long,COUNTRY,DEPARTMENT,DEPARTMENT_ID
+[20],2019,Val Thorens,33.4,5.4,2363,0,0,45.2979109,6.5822693,France,Savoy,FR-73
+[18],2019,Col du Galibier,23.0,5.1,2622,20,0,45.0641384,6.407857,France,Hautes-Alpes,FR-05
+[14],2019,Col du Tourmalet,19.0,7.4,2115,0,0,42.9083745,0.1452684,France,Hautes Pyrenees,FR-65
+[18],2019,Col d'Izoard,14.2,7.0,2354,75,0,44.8196595,6.734975,France,Hautes-Alpes,FR-05
+[12],2019,Col de Peyresourde,13.2,6.9,1562,64,1,42.8023062,0.463075,France,Hautes Pyrenees,FR-65
+[19],2019,Col de l'Iseran,13.0,7.3,2758,0,0,45.4171961, 7.0307238,France,Savoie,FR-73
+[14],2019,Col du Soulor,11.9,7.7,1470,54,1,42.9606159,-0.2611338,France,Hautes Pyrenees,FR-65
+[15],2019,Foix - Prat d'Albis,11.8,6.8,1194,0,1,42.9218632, 1.5817497,France,Ariège,FR-09
+[15],2019,Port de Lers,11.4,7.0,1507,65,1,42.8064098,1.4115943,France,Ariège,FR-09
+[6],2019,Ballon d'Alsace,11.0,5.9,1171,56,1,47.8223547,6.8452273,France,Haut-Rhin,FR-68
+[6],2019,Le Markstein,10.8,5.7,1178,118,1,47.9233312,7.0318064,France,Haut-Rhin,FR-68
+[12],2019,Hourquette d'Ancizan,9.9,7.7,1558,30,1,42.8999394,0.3057703,France,Hautes Pyrenees,FR-65
+[15],2019,Mur de Peguere,9.3,7.7,1354,38,1,42.9183803,1.3892715,France,Ariège,FR-09
+[18],2019,Col de Vars,9.3,7.1,2104,125,1,44.5388042,6.7028384,France,Hautes-Alpes,FR-05
+[9],2019,Côte des Guillaumanches,7.8,4.1,1018,65,3,45.3411591, 3.7075378,France,Haute-Loire,FR-43
+[19],2019,Montée de Tignes,7.4,6.9,2088,-35,1,45.4977526,6.9341838,France,Savoy,FR-73
+[6],2019,La Planche des Belles Filles,7.0,8.5,1139,0,1,47.7718658,6.7761968,France,Haute-Saône,FR-70
+[15],2019,Col de Montsegur,6.8,5.9,1043,125,2,42.8740525,1.8245122,France,Ariège,FR-09
+[19],2019,Montée d'Aussois,6.5,6.1,1458,51,2,45.2275415,6.7413988,France,Savoy,FR-73
+[8],2019,Col de la Croix Montmain,6.1,6.9,735,149,2,46.0591394,4.5374908,France,Rhône,FR-69
+[5],2019,Côte du Haut-Kœnigsbourg,5.9,5.9,556,66,2,48.2495226, 7.3454923,France,Bas-Rhin,FR-67
+[6],2019,Col du Hundsruck,5.3,6.9,751,86,2,47.8063142,7.0424554,France,Haut-Rhin,FR-68
+[8],2019,Cote d'Affoux,5.3,5.5,688,103,3,45.8446855, 4.4043236,France,Rhône,FR-69
+[17],2019,Col de la Sentinelle,5.2,5.4,978,8,3,44.5123472,6.1019799,France,Hautes-Alpes,FR-05
+[10],2019,Côte d'Espailon,5.2,4.8,592,122,3,44.5206809, 2.7616471,France,Aveyron,FR-12
+[8],2019,Cote d'Aveize,5.2,6.3,778,51,2,45.6826975,4.4769624,France,Rhône,FR-69
+[8],2019,Col de la Croix de Part,4.8,8.0,736,61,2,45.7426322,4.5710383,France,Rhône,FR-69
+[5],2019,Côte des Trois-Épis,4.9,6.9,652,36,2,48.0998689,7.2310706,France,Haut-Rhin,FR-68
+[5],2019,Côte des Cinq Châteaux,4.6,7.0,574,20,3,48.0351444,7.2731616,France,Haut-Rhin,FR-68
+[7],2019,Côte de Chassagne-Saint-Denis,4.3,4.9,548,135,3,47.0835278,6.1139837,France,Doubs,FR-25
+[8],2019,Col de la Croix-de-Thel,4.1,8.1,649,128,2,45.9697256,4.4713666,France,Rhône,FR-69
+[18],2019,Cote des Demoiselles Coiffès,3.9,5.3,1019,195,3,44.4943535,6.3418247,France,Hautes-Alpes,FR-05
+[19],2019,Col de la Madeleine,3.8,6.9,1727,26,3,45.4349516,6.3755223,France,Savoy,FR-73
+[10],2019,Côte de La Malric,3.8,4.2,490,54,3,44.1292834,2.3921918,France,Aveyron,FR-12
+[9],2019,Côte de Saint-Just,3.6,7.3,734,13,3,45.2385647,3.3528568,France,Haute-Loire,FR-43
+[11],2019,Côte de Tonnac,3.6,4.7,337,136,3,44.0680458,1.864577,France,Tarn,FR-81
+[7],2019,Côte de Nans-sous-Sainte-Anne,3.5,4.8,537,111,4,46.9769116,5.9988436,France,Doubs,FR-25
+[6],2019,Col des Chevrères,3.5,9.7,917,19,2,47.7913262,6.742409,France,Haute-Saône,FR-70
+[5],2019,Côte de Grendelbruch,3.4,5.5,543,132,3,48.4930562,7.3233331,France,Bas-Rhin,FR-67
+[6],2019,Col des Croix,3.3,5.4,675,38,3,47.8600173,6.7470869,France,Vosges,FR-88
+[9],2019,Mur d'Aurec-sur-Loire,3.2,10.8,795,134,1,45.3698465,4.2008542,France,Haute-Loire,FR-43
+[4],2019,Cote de Maron,3.2,5.0,394,15,4,48.6389923,6.0569509,France,Meurthe-et-Moselle,FR-54
+[19],2019,Côte de Saint-André,3.1,7.1,1168,65,3,47.8127432,0.9704368,France,Loir-et-Cher,FR-41
+[10],2019,Côte de Chaudes-Aigues,3.0,6.1,982,176,3,44.8548378,3.0052093,France,Cantal,FR-15
+[7],2019,Col de Ferriere,2.7,4.6,592,193,4,47.3601775,6.5719098,France,Doubs,FR-25
+[11],2019,Côte de Castelnau-de-Montmiral,2.5,4.1,267,92,4,43.9921757,1.7826239,France,Tarn,FR-81
+[17],2019,Côte de la Rochette-du-Buis,2.3,5.4,740,96,4,44.2521403,5.4431926,France,Drôme,FR-26
+[10],2019,Côte de Mallet,2.2,6.2,898,195,4,44.0420673,7.3603574,France,Maritime Alps,FR-06
+[8],2019,Col de la Croix Paquet,2.1,9.6,593,115,2,45.9161667,4.439194,France,Rhône,FR-69
+[8],2019,Cote de la Jalliere,1.9,8.0,688,13,3,45.5184544,4.4317447,France,Loire,FR-42
+[3],2019,Côte de Champillon,1.8,7.0,256,25,3,49.0842600,3.9774000,France,Marne,FR-51
+[16],2019,Cote de Saint-Jean,1.8,4.3,265,181,4,44.1168000,4.0538700,France,Gard,FR-30
+[12],2019,Côte de Montoulieu-Saint-Bernard,1.7,5.5,379,147,4,43.2331000, 0.9094910,France,Haute-Garonne,FR-31
+[14],2019,Cote de Labatmale,1.4,6.5,466,90,4, 43.1821847, -0.1537221,France,Pyrénées-Atlantiques,FR-64
+[6],2019,Le Grand Ballon,1.3,7.4,1327,110,3,47.9036778,7.1032626,France,Haut-Rhin,FR-68
+[1],2019,Muur van Geraardsbergen,1.2,6.6,100,151,3,50.7720359,3.8882433,Belgium,Aalst,BE-VOV
+[3],2019,Côte de Nanteuil-la-Foret,1.1,7.0,255,42,4,49.1313648,3.9213491,France,Marne,FR-51
+[21],2019,Côte de Saint-Rémy-lès-Chevreuse,1.1,5.9,150,94,4,48.7054888,2.0711090,France,Yvelines,FR-78
+[4],2019,Cote des Rosieres,1.0,6.5,315,93,4,44.3861618,5.4642969,France,Hautes-Alpes,FR-05
+[1],2019,Bosberg,1.0,5.7,99,147,4,50.7687043,3.9399812,Belgium,Halle-Vilvoorde,BE-VBR
+[3],2019,Côte de Mutigny,0.9,12.2,199,16,3,49.065989,4.0231916,France,Marne,FR-51
+[3],2019,Côte d'Hautvillers,0.9,10.1,172,29,3,49.0808089,3.9416557,France,Marne,FR-51
+[21],2019,Côte de Châteaufort,0.9,5.1,152,90,4,44.2743415,6.0164417,France,Alpes-de-Haute-Provence,FR-04

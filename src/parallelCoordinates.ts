@@ -3,7 +3,8 @@ import { Department } from "./types";
 
 export function createParallelCoordinates(
   data: Department[], 
-  containerSelector: string
+  containerSelector: string,
+  sharedState?: any
 ) {
   // Available parameters
   const allDimensions = [
@@ -37,6 +38,7 @@ export function createParallelCoordinates(
     hiddenRegions: ["Martinique", "Guadeloupe", "French Guiana", "Réunion", "Mayotte"] as string[],
     regionAverages: [] as string[],
   };
+  let highlightedDepartments: Set<string> = new Set();
 
   // Add window resize handler
   let resizeTimeout: number;
@@ -139,6 +141,27 @@ export function createParallelCoordinates(
       .on("click", renderChart);
 
     return { dimensionList, departmentSelect };
+  }
+
+  function updateHighlighting() {
+    const paths = container.selectAll("path");
+    paths
+      .attr("stroke-width", d => {
+        const dept = d as Department;
+        if (highlightedDepartments.has(dept.CODE) || 
+            state.clickedDepartment === dept.CODE) {
+          return 4;
+        }
+        return 1.5;
+      })
+      .attr("stroke-opacity", d => {
+        const dept = d as Department;
+        if (highlightedDepartments.has(dept.CODE) || 
+            state.clickedDepartment === dept.CODE) {
+          return 1;
+        }
+        return 0.4;
+      });
   }
 
   function getDisplayName(dimension: string): string {
@@ -368,6 +391,16 @@ export function createParallelCoordinates(
       .on("click", function(event: MouseEvent, d: Department) {
         state.clickedDepartment = state.clickedDepartment === d.CODE ? null : d.CODE;
         container.select("select").property("value", state.clickedDepartment || "");
+        if (highlightedDepartments.has(d.CODE)) {
+          highlightedDepartments.delete(d.CODE);
+        } else {
+          highlightedDepartments.add(d.CODE);
+        }
+        
+        // Notify other visualizations
+        if (sharedState && sharedState.onHighlightChange) {
+          sharedState.onHighlightChange(Array.from(highlightedDepartments));
+        }
         renderChart();
         event.stopPropagation();
       })

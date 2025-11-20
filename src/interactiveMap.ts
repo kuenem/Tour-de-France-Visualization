@@ -30,7 +30,14 @@ interface GeoJson {
 // 2. MAIN FUNCTION DEFINITION
 // ============================================================================
 
-export function createInteractiveMap(departmentData: Department[], containerSelector: string): void {
+export function createInteractiveMap(
+  departmentData: Department[], 
+  containerSelector: string, 
+  sharedState?: any
+): {
+  highlightedDepartments: (codes: string[]) => void;
+  clearHighlights: () => void;
+} {
   const container = d3.select(containerSelector);
   container.html("");
 
@@ -41,7 +48,7 @@ export function createInteractiveMap(departmentData: Department[], containerSele
   const containerNode = container.node() as HTMLElement;
   const width = containerNode ? containerNode.clientWidth : 800;
   const height = 600;
-  const margin = { top: 200, right: 20, bottom: 30, left: 40 };
+  const margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
   // Create SVG with zoom capability
   const svg = container.append("svg")
@@ -73,12 +80,13 @@ export function createInteractiveMap(departmentData: Department[], containerSele
 
   // Application state
   let currentDataField: keyof Department = 'POPULATION_DENSITY_KM2';
-  let useLogScale: boolean = false;
+  let useLogScale: boolean = true;
   let currentView: 'regions' | 'departments' = 'regions';
   let selectedRegion: string | null = null;
   let departmentsGeoJson: any = null;
   let regionsGeoJson: any = null;
   let showAllDepartments: boolean = false;
+  let highlightedDepartments = new Set<string>();
 
   // ============================================================================
   // 5. CONTROL PANEL SETUP
@@ -132,6 +140,7 @@ export function createInteractiveMap(departmentData: Department[], containerSele
   logScaleLabel.append("input")
     .attr("type", "checkbox")
     .attr("id", "logScaleToggle")
+    .property("checked", useLogScale)
     .style("margin-right", "5px")
     .on("change", function() {
       useLogScale = (this as HTMLInputElement).checked;
@@ -287,14 +296,61 @@ export function createInteractiveMap(departmentData: Department[], containerSele
     }
   }
 
+  // Function to highlight departments
+  function highlightDepartments(codes: string[]) {
+    highlightedDepartments = new Set(codes);
+    updateDepartmentHighlighting();
+  }
+
+  /**
+   * Updates the visual highlighting of departments
+   */
+  function updateDepartmentHighlighting() {
+    g.selectAll(".department")
+      .style("stroke", (d: any) => {
+        const deptCode = d.properties.id || d.properties.code;
+        return highlightedDepartments.has(deptCode) ? "red" : "#fff";
+      })
+      .style("stroke-width", (d: any) => {
+        const deptCode = d.properties.id || d.properties.code;
+        return highlightedDepartments.has(deptCode) ? 3 : 0.5;
+      })
+      .style("filter", (d: any) => {
+        const deptCode = d.properties.id || d.properties.code;
+        return highlightedDepartments.has(deptCode) ? "drop-shadow(0 0 8px red)" : "none";
+      });
+  }
+
+  // Add click handler for manual highlighting
+  function addHighlightingInteractions() {
+    g.selectAll(".department")
+      .on("click", function(event: MouseEvent, d: any) {
+        event.stopPropagation();
+        const deptCode = d.properties.id || d.properties.code;
+        
+        if (highlightedDepartments.has(deptCode)) {
+          highlightedDepartments.delete(deptCode);
+        } else {
+          highlightedDepartments.add(deptCode);
+        }
+        
+        updateDepartmentHighlighting();
+        
+        // Notify other visualizations
+        if (sharedState && sharedState.onHighlightChange) {
+          sharedState.onHighlightChange(Array.from(highlightedDepartments));
+        }
+      });
+  }
+
   // ============================================================================
   // 8. GEOGRAPHIC PROJECTION AND ZOOM SETUP
   // ============================================================================
 
   const projection = d3.geoMercator()
     .center([2.454071, 46.279229]) // Center of France
-    .scale(2500)
-    .translate([width / 2, height / 2]);
+    .scale(2000)
+    .translate([width / 2, height / 2 + 50]);
 
   const path = d3.geoPath().projection(projection);
 
@@ -463,6 +519,11 @@ export function createInteractiveMap(departmentData: Department[], containerSele
       .text(`France Regions - Click to Zoom (Avg. ${fieldLabel}${scaleType})`);
 
     addLegend(colorScale, `Avg. ${fieldLabel}${scaleType}`);
+
+    setTimeout(() => {
+      addHighlightingInteractions();
+      updateDepartmentHighlighting();
+    }, 100);
   }
 
   // ============================================================================
@@ -589,7 +650,7 @@ export function createInteractiveMap(departmentData: Department[], containerSele
               return;
             }
           }
-        }
+        }    
       });
 
     // ============================================================================
@@ -633,6 +694,10 @@ export function createInteractiveMap(departmentData: Department[], containerSele
       .on("click", renderRegionsView);
 
     addLegend(colorScale, `${fieldLabel}${scaleType}`);
+    setTimeout(() => {
+      addHighlightingInteractions();
+      updateDepartmentHighlighting();
+    }, 100);  
   }
 
   // ============================================================================
@@ -729,6 +794,7 @@ export function createInteractiveMap(departmentData: Department[], containerSele
             zoomToRegion(regionName, regionFeature);
           }
         }
+        
       });
 
     // ============================================================================
@@ -765,6 +831,11 @@ export function createInteractiveMap(departmentData: Department[], containerSele
       .text(`All French Departments - ${fieldLabel}${scaleType} - Click any department to zoom to its region`);
 
     addLegend(colorScale, `${fieldLabel}${scaleType}`);
+
+    setTimeout(() => {
+      addHighlightingInteractions();
+      updateDepartmentHighlighting();
+    }, 100);
   }
 
   // ============================================================================
@@ -854,5 +925,26 @@ export function createInteractiveMap(departmentData: Department[], containerSele
     if (currentView === 'departments' && event.target === this) {
       renderRegionsView();
     }
-  });
+    });
+
+  // ============================================================================
+  // 14. INTERACTION HANDLERS
+  // ============================================================================
+
+
+    // Listen to external highlight changes
+  if (sharedState) {
+    sharedState.onHighlightChange = (codes: string[]) => {
+      highlightDepartments(codes);
+    };
+  }
+
+  // Return functions for external control
+  return {
+    highlightedDepartments: highlightDepartments,
+    clearHighlights: () => {
+      highlightedDepartments.clear();
+      updateDepartmentHighlighting();
+    }
+  };
 }
