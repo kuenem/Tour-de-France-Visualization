@@ -86,6 +86,7 @@ export function createInteractiveMap(
   let departmentsGeoJson: any = null;
   let regionsGeoJson: any = null;
   let showAllDepartments: boolean = false;
+  let showRelativeDistribution: boolean = false;
   let highlightedDepartments = new Set<string>();
 
   // ============================================================================
@@ -119,6 +120,13 @@ export function createInteractiveMap(
         useLogScale = false;
         d3.select("#logScaleToggle").property("checked", false);
       }
+      // Update relative distribution checkbox state
+      const supportsRelative = supportsRelativeDistribution(currentDataField);
+      d3.select("#relativeToggle")
+        .property("disabled", !supportsRelative)
+        .property("checked", false);
+      showRelativeDistribution = false;
+
       updateVisualization();
     });
 
@@ -172,6 +180,25 @@ export function createInteractiveMap(
     .text("Show All Departments")
     .style("margin-left", "5px");
 
+  // Relative distribution toggle
+  const relativeToggleLabel = controls.append("label")
+    .style("display", "flex")
+    .style("align-items", "center")
+    .style("font-size", "14px");
+
+  const relativeCheckbox = relativeToggleLabel.append("input")
+    .attr("type", "checkbox")
+    .attr("id", "relativeToggle")
+    .property("disabled", false) // Will be updated based on field
+    .on("change", function() {
+      showRelativeDistribution = (this as HTMLInputElement).checked;
+      updateVisualization();
+    });
+
+  relativeToggleLabel.append("span")
+    .text("Show Relative Distribution")
+    .style("margin-left", "5px");
+
   // ============================================================================
   // 6. DATA STRUCTURES AND TOOLTIP
   // ============================================================================
@@ -221,6 +248,51 @@ export function createInteractiveMap(
   }
 
   /**
+   * Calculates relative values (percentages) for the current data field
+   */
+  function calculateRelativeValues(depts: Department[], field: keyof Department): Map<string, number> {
+    const total = depts.reduce((sum, dept) => sum + getNumericValue(dept, field), 0);
+    const relativeMap = new Map<string, number>();
+    
+    depts.forEach(dept => {
+      const value = getNumericValue(dept, field);
+      const relativeValue = total > 0 ? (value / total) * 100 : 0;
+      relativeMap.set(dept.CODE.replace('-', ''), relativeValue);
+    });
+    
+    return relativeMap;
+  }
+
+  /**
+   * Gets the appropriate value (absolute or relative) for visualization
+   */
+  function getVisualizationValue(dept: Department, field: keyof Department, useRelative: boolean): number {
+    if (useRelative && supportsRelativeDistribution(field)) {
+      // For region view, we need to handle this differently - see updated region view code
+      return getNumericValue(dept, field); // This will be overridden in region view
+    } else {
+      return getNumericValue(dept, field);
+    }
+  }
+
+  /**
+   * Determines which fields can show relative distribution
+   */
+  function supportsRelativeDistribution(field: keyof Department): boolean {
+    const relativeFields: (keyof Department)[] = [
+      'POPULATION',                   
+      'NUM_CLIMBS',           
+      'TOTAL_LENGTH_KM',      
+      'NUM_HC',               
+      'NUM_CAT_1',            
+      'NUM_STARTS',           
+      'NUM_ENDS',             
+      'NUM_YELLOW_JERSEY_WINNERS'
+    ];
+    return relativeFields.includes(field);
+  }
+
+  /**
    * Determines which fields benefit from logarithmic scaling
    * Hardcoded based on data distribution characteristics
    */
@@ -243,21 +315,38 @@ export function createInteractiveMap(
   /**
    * Formats values appropriately based on field type
    */
-  function formatValue(value: number, field: keyof Department): string {
-    if (isNaN(value) || value <= 0) return 'N/A';
-    
-    if (field === 'POPULATION_DENSITY_KM2') {
-      return value.toFixed(1) + '/km²';
-    } else if (field === 'AVG_GRADE_PERCENT') {
-      return value.toFixed(1) + '%';
-    } else if (field === 'AVG_ALTITUDE_M') {
-      return Math.round(value).toLocaleString() + 'm';
-    } else if (field === 'POPULATION') {
-      return value.toLocaleString();
-    } else {
-      return value.toLocaleString();
+    function formatValue(value: number, field: keyof Department): string {
+      if (isNaN(value) || value <= 0) return 'N/A';
+      
+      if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+        return value.toFixed(2) + '%';
+      } else if (field === 'POPULATION_DENSITY_KM2') {
+        return value.toFixed(1) + '/km²';
+      } else if (field === 'AVG_GRADE_PERCENT') {
+        return value.toFixed(1) + '%';
+      } else if (field === 'AVG_ALTITUDE_M') {
+        return Math.round(value).toLocaleString() + 'm';
+      } else if (field === 'POPULATION') {
+        return value.toLocaleString();
+      } else {
+        return value.toLocaleString();
+      }
     }
-  }
+  // function formatValue(value: number, field: keyof Department): string {
+  //   if (isNaN(value) || value <= 0) return 'N/A';
+    
+  //   if (field === 'POPULATION_DENSITY_KM2') {
+  //     return value.toFixed(1) + '/km²';
+  //   } else if (field === 'AVG_GRADE_PERCENT') {
+  //     return value.toFixed(1) + '%';
+  //   } else if (field === 'AVG_ALTITUDE_M') {
+  //     return Math.round(value).toLocaleString() + 'm';
+  //   } else if (field === 'POPULATION') {
+  //     return value.toLocaleString();
+  //   } else {
+  //     return value.toLocaleString();
+  //   }
+  // }
 
   function getFieldLabel(field: keyof Department): string {
     return dataFields.find(f => f.value === field)?.label || field;
@@ -411,27 +500,75 @@ export function createInteractiveMap(
      * Calculate average values per region for the selected data field
      */
     const regionData = new Map();
+    const regionValues: number[] = [];
+    const relativeRegionData = new Map();
+
     regionToDepartmentsMap.forEach((depts, regionName) => {
+    // //   const totalValue = depts.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+    // //   const avgValue = totalValue / depts.length;
+    // //   regionData.set(regionName, avgValue);
+    // // });
+    // if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+    //     // Calculate relative percentage for the region
+    //     const regionValue = depts.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+    //     const totalValue = departmentData.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+    //     const relativeValue = totalValue > 0 ? (regionValue / totalValue) * 100 : 0;
+    //     regionData.set(regionName, relativeValue);
+    //     relativeRegionData.set(regionName, relativeValue);
+    //   } else {
+    //     // Original absolute value calculation
+    //     const totalValue = depts.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+    //     const avgValue = totalValue / depts.length;
+    //     regionData.set(regionName, avgValue);
+    //   }
+    if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+      // Calculate total value for the region (sum of all departments in the region)
+      const regionTotal = depts.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+      // Calculate country total for normalization
+      const countryTotal = departmentData.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+      const relativeValue = countryTotal > 0 ? (regionTotal / countryTotal) * 100 : 0;
+      regionData.set(regionName, relativeValue);
+      regionValues.push(relativeValue);
+    } else {
+      // Original absolute value calculation (average)
       const totalValue = depts.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
       const avgValue = totalValue / depts.length;
       regionData.set(regionName, avgValue);
+      regionValues.push(avgValue);
+    }
     });
 
-    const values = Array.from(regionData.values()).filter(v => !isNaN(v) && v > 0) as number[];
+    // const values = Array.from(regionData.values()).filter(v => !isNaN(v) && v > 0) as number[];
+    const values = regionValues.filter(v => !isNaN(v) && v >= 0) as number[];
 
     let colorScale;
     let domain: [number, number];
 
-    if (useLogScale && shouldUseLogScale(currentDataField)) {
-      // Logarithmic scaling: transform values using log10 with +1 to handle zeros
+    if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+      // For relative values, use 0-100% domain with linear scale (log doesn't make sense for percentages)
+      domain = [0, Math.max(1, d3.max(values) || 1)]; // Ensure at least 1 to avoid empty scale
+      colorScale = d3.scaleSequential(d3.interpolateBlues).domain(domain);
+    } else if (useLogScale && shouldUseLogScale(currentDataField)) {
+      // Logarithmic scaling for absolute values
       const logValues = values.map(v => Math.log10(v + 1));
       domain = [0, d3.max(logValues) || 1];
       colorScale = d3.scaleSequential(d3.interpolateBlues).domain(domain);
     } else {
-      // Linear scaling: use values directly
+      // Linear scaling for absolute values
       domain = [0, d3.max(values) || 1];
       colorScale = d3.scaleSequential(d3.interpolateBlues).domain(domain);
     }
+
+    // if (useLogScale && shouldUseLogScale(currentDataField)) {
+    //   // Logarithmic scaling: transform values using log10 with +1 to handle zeros
+    //   const logValues = values.map(v => Math.log10(v + 1));
+    //   domain = [0, d3.max(logValues) || 1];
+    //   colorScale = d3.scaleSequential(d3.interpolateBlues).domain(domain);
+    // } else {
+    //   // Linear scaling: use values directly
+    //   domain = [0, d3.max(values) || 1];
+    //   colorScale = d3.scaleSequential(d3.interpolateBlues).domain(domain);
+    // }
 
     // ============================================================================
     // 10.2 REGIONS VISUALIZATION
@@ -445,14 +582,17 @@ export function createInteractiveMap(
       .attr("d", (d: any) => path(d.geometry))
       .attr("fill", (d: any) => {
         const regionName = d.properties.name || d.properties.nom;
-        const avgValue = regionData.get(regionName);
-        if (!avgValue || isNaN(avgValue) || avgValue <= 0) return "#ccc";
+        const value = regionData.get(regionName);
         
-        // Apply logarithmic transformation if enabled
-        if (useLogScale && shouldUseLogScale(currentDataField)) {
-          return colorScale(Math.log10(avgValue + 1));
+        if (value === undefined || isNaN(value) || value < 0) return "#ccc";
+        
+        if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+          // Direct use of percentage value for color
+          return colorScale(value);
+        } else if (useLogScale && shouldUseLogScale(currentDataField)) {
+          return colorScale(Math.log10(value + 1));
         } else {
-          return colorScale(avgValue);
+          return colorScale(value);
         }
       })
       .attr("stroke", "#fff")
@@ -461,20 +601,30 @@ export function createInteractiveMap(
       .on("mouseover", function(event: MouseEvent, d: any) {
         const regionName = d.properties.name || d.properties.nom;
         const deptsInRegion = regionToDepartmentsMap.get(regionName) || [];
-        const avgValue = regionData.get(regionName);
+        const value = regionData.get(regionName);
         const fieldLabel = getFieldLabel(currentDataField);
+
+        let tooltipContent = `
+          <strong>${regionName}</strong><br/>
+          Departments: ${deptsInRegion.length}<br/>
+        `;
+
+        if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+          tooltipContent += `Share of ${fieldLabel}: ${value !== undefined ? value.toFixed(2) + '%' : 'N/A'}<br/>`;
+          // Add absolute value for context
+          const regionTotal = deptsInRegion.reduce((sum, dept) => sum + getNumericValue(dept, currentDataField), 0);
+          tooltipContent += `Total ${fieldLabel}: ${formatValue(regionTotal, currentDataField)}<br/>`;
+        } else {
+          tooltipContent += `Avg. ${fieldLabel}: ${value !== undefined ? formatValue(value, currentDataField) : 'N/A'}<br/>`;
+        }
         
-        tooltip.style("display", "block")
-          .html(`
-            <strong>${regionName}</strong><br/>
-            Departments: ${deptsInRegion.length}<br/>
-            Avg. ${fieldLabel}: ${avgValue ? formatValue(avgValue, currentDataField) : 'N/A'}<br/>
-            <em>Click to zoom in</em>
-          `);
+        tooltipContent += `<em>Click to zoom in</em>`;
+        
+        tooltip.style("display", "block").html(tooltipContent);
       })
       .on("mousemove", function(event: MouseEvent) {
         tooltip.style("left", (event.pageX + 10) + "px")
-               .style("top", (event.pageY - 10) + "px");
+              .style("top", (event.pageY - 10) + "px");
       })
       .on("mouseout", function() {
         tooltip.style("display", "none");
@@ -484,6 +634,65 @@ export function createInteractiveMap(
         const regionName = d.properties.name || d.properties.nom;
         zoomToRegion(regionName, d);
       });
+
+    // g.selectAll(".region")
+    //   .data(regionsGeoJson.features)
+    //   .enter()
+    //   .append("path")
+    //   .attr("class", "region")
+    //   .attr("d", (d: any) => path(d.geometry))
+    //   .attr("fill", (d: any) => {
+    //     const regionName = d.properties.name || d.properties.nom;
+    //     const avgValue = regionData.get(regionName);
+    //     if (!avgValue || isNaN(avgValue) || avgValue <= 0) return "#ccc";
+        
+    //     // Apply logarithmic transformation if enabled
+    //     if (useLogScale && shouldUseLogScale(currentDataField)) {
+    //       return colorScale(Math.log10(avgValue + 1));
+    //     } else {
+    //       return colorScale(avgValue);
+    //     }
+    //   })
+    //   .attr("stroke", "#fff")
+    //   .attr("stroke-width", 1)
+    //   .style("cursor", "pointer")
+    //   .on("mouseover", function(event: MouseEvent, d: any) {
+    //     const regionName = d.properties.name || d.properties.nom;
+    //     const deptsInRegion = regionToDepartmentsMap.get(regionName) || [];
+    //     const avgValue = regionData.get(regionName);
+    //     const fieldLabel = getFieldLabel(currentDataField);
+
+    //     tooltip.style("display", "block")
+    //       .html(`
+    //         <strong>${regionName}</strong><br/>
+    //         Departments: ${deptsInRegion.length}<br/>
+    //         ${showRelativeDistribution && supportsRelativeDistribution(currentDataField) 
+    //           ? `Share of ${fieldLabel}: ${avgValue ? avgValue.toFixed(2) + '%' : 'N/A'}<br/>`
+    //           : `Avg. ${fieldLabel}: ${avgValue ? formatValue(avgValue, currentDataField) : 'N/A'}<br/>`
+    //         }
+    //         <em>Click to zoom in</em>
+    //       `);
+        
+    //     // tooltip.style("display", "block")
+    //     //   .html(`
+    //     //     <strong>${regionName}</strong><br/>
+    //     //     Departments: ${deptsInRegion.length}<br/>
+    //     //     Avg. ${fieldLabel}: ${avgValue ? formatValue(avgValue, currentDataField) : 'N/A'}<br/>
+    //     //     <em>Click to zoom in</em>
+    //     //   `);
+    //   })
+    //   .on("mousemove", function(event: MouseEvent) {
+    //     tooltip.style("left", (event.pageX + 10) + "px")
+    //            .style("top", (event.pageY - 10) + "px");
+    //   })
+    //   .on("mouseout", function() {
+    //     tooltip.style("display", "none");
+    //   })
+    //   .on("click", function(event: MouseEvent, d: any) {
+    //     event.stopPropagation();
+    //     const regionName = d.properties.name || d.properties.nom;
+    //     zoomToRegion(regionName, d);
+    //   });
 
     // ============================================================================
     // 10.3 REGION LABELS AND TITLES
@@ -509,6 +718,7 @@ export function createInteractiveMap(
 
     const fieldLabel = getFieldLabel(currentDataField);
     const scaleType = useLogScale && shouldUseLogScale(currentDataField) ? " (Log Scale)" : "";
+    const relativeType = showRelativeDistribution && supportsRelativeDistribution(currentDataField) ? " (Relative %)" : "";
 
     g.append("text")
       .attr("x", width / 2)
@@ -516,7 +726,8 @@ export function createInteractiveMap(
       .attr("text-anchor", "middle")
       .style("font-size", "16px")
       .style("font-weight", "bold")
-      .text(`France Regions - Click to Zoom (Avg. ${fieldLabel}${scaleType})`);
+      // .text(`France Regions - Click to Zoom (Avg. ${fieldLabel}${scaleType})`);
+      .text(`France Regions - Click to Zoom (${showRelativeDistribution && supportsRelativeDistribution(currentDataField) ? 'Share of ' : 'Avg. '}${fieldLabel}${scaleType}${relativeType}${relativeType})`);
 
     addLegend(colorScale, `Avg. ${fieldLabel}${scaleType}`);
 
@@ -858,13 +1069,26 @@ export function createInteractiveMap(
 
     const legendDomain = colorScale.domain();
     const maxDomain = legendDomain[1] as number;
-    const legendScale = useLogScale && shouldUseLogScale(currentDataField) 
-      ? d3.scaleLog().domain([1, Math.pow(10, maxDomain)]).range([0, legendWidth])
-      : d3.scaleLinear().domain(legendDomain).range([0, legendWidth]);
+    let legendScale, legendAxis;
+    
+    if (showRelativeDistribution && supportsRelativeDistribution(currentDataField)) {
+      // For relative values, use percentage scale
+      legendScale = d3.scaleLinear().domain([0, maxDomain]).range([0, legendWidth]);
+      legendAxis = d3.axisBottom(legendScale).ticks(5).tickFormat(d => d + '%');
+    } else if (useLogScale && shouldUseLogScale(currentDataField)) {
+      legendScale = d3.scaleLog().domain([1, Math.pow(10, maxDomain)]).range([0, legendWidth]);
+      legendAxis = d3.axisBottom(legendScale).ticks(4, ".1s");
+    } else {
+      legendScale = d3.scaleLinear().domain(legendDomain).range([0, legendWidth]);
+      legendAxis = d3.axisBottom(legendScale).ticks(5);
+    }
+    // const legendScale = useLogScale && shouldUseLogScale(currentDataField) 
+    //   ? d3.scaleLog().domain([1, Math.pow(10, maxDomain)]).range([0, legendWidth])
+    //   : d3.scaleLinear().domain(legendDomain).range([0, legendWidth]);
 
-    const legendAxis = useLogScale && shouldUseLogScale(currentDataField)
-      ? d3.axisBottom(legendScale).ticks(4, ".1s") // Logarithmic ticks
-      : d3.axisBottom(legendScale).ticks(5);       // Linear ticks
+    // const legendAxis = useLogScale && shouldUseLogScale(currentDataField)
+    //   ? d3.axisBottom(legendScale).ticks(4, ".1s") // Logarithmic ticks
+    //   : d3.axisBottom(legendScale).ticks(5);       // Linear ticks
 
     // ============================================================================
     // 13.2 GRADIENT CREATION
