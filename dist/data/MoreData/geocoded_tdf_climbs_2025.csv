@@ -1,0 +1,77 @@
+STAGE_NUMBER,YEAR,NAME,DISTANCE,AVERAGE_SLOPE,INITIAL_ALTITUDE,STARTING_AT_KM,CATEGORY,lat,long,COUNTRY,DEPARTMENT,DEPARTMENT_ID
+[18],2025,Col de la Loze,26.5,6.4,2275,-1,0.0,45.4050808,6.6016031,France,Savoy,FR-73
+[18],2025,Col du Glandon,21.7,5.1,1903,109,0.0,45.2396059,6.1755353,France,Savoy,FR-73
+[18],2025,Col de la Madeleine,19.3,7.8,1984,66,0.0,45.4349516,6.3755223,France,Savoy,FR-73
+[19],2025,La Plagne,19.3,7.2,2062,-1,0.0,45.5042986,6.7049123,France,Savoy,FR-73
+[14],2025,Col du Tourmalet,18.9,7.4,2084,93,0.0,42.9083745,0.1452684,France,Hautes Pyrenees,FR-65
+[16],2025,Mont Ventoux,15.6,8.7,1831,0,0.0,44.1739649,5.2783976,France,Vaucluse,FR-84
+[12],2025,Hautacam,13.5,7.9,1495,0,0.0,43.0024054,-0.0147613,France,Hautes Pyrenees,FR-65
+[19],2025,Col du Pré,12.6,7.8,1732,62,0.0,45.6903011,6.5979747,France,Savoy,FR-73
+[14],2025,Luchon-Superbagnères,12.6,7.5,1755,0,0.0,42.7683049,0.5774009,France,Haute-Garonne,FR-31
+[20],2025,Col de la Croix de la Serra,12.2,4.1,1030,159,3.0,46.2886414, 5.7995444,France,Jura,FR-39
+[12],2025,Col du Soulor,11.8,7.6,1461,47,1.0,42.9606159,-0.2611338,France,Hautes Pyrenees,FR-65
+[13],2025,Peyragudes,8.1,7.6,1522,0,1.0,42.7761884,0.4574178,France,Haute-Garonne,FR-31
+[14],2025,Col de Peyresourde,7.1,8.1,1572,32,1.0,42.8023062,0.463075,France,Hautes Pyrenees,FR-65
+[15],2025,Côte de Sorèze,6.3,5.7,703,82,3.0,43.4539616,2.0678397,France,Tarn,FR-81
+[19],2025,Cormet de Roselend,5.8,6.5,1969,50,0.0,45.6913293,6.6906249,France,Savoy,FR-73
+[20],2025,Côte de Valfin,5.6,4.3,683,139,4.0,46.4350195,5.8661156,France,Jura,FR-39
+[6],2025,Côte du Mont Pinçon,5.6,3.8,336,166,3.0,48.9944658,-0.6309548,France,Calvados,FR-14
+[10],2025,Côte de Charade,5.2,6.7,835,99,2.0,45.7494250,3.0289940,France,Puy-de-Dôme,FR-63
+[10],2025,Col de la Croix Saint-Robert,5.1,6.3,1446,9,2.0,45.5640951,2.8359722,France,Puy-de-Dôme,FR-63
+[14],2025,Col d'Aspin,5.0,7.4,1475,63,2.0,42.9423318,0.3273823,France,Hautes Pyrenees,FR-65
+[10],2025,Côte de La Baraque,4.8,7.3,761,111,2.0,43.8150012,5.738258,France,Alpes-de-Haute-Provence,FR-04
+[6],2025,La Batonnière,4.3,4.0,220,131,,48.8409598,-0.4391093,France,Orne,FR-61
+[10],2025,Côte de Loubeyrat,4.2,6.1,700,153,2.0,45.9405019,2.9763201,France,Puy-de-Dôme,FR-63
+[17],2025,Col de Tartaiguille,3.9,3.5,400,43,4.0,44.6673795,4.9309533,France,Drôme,FR-26
+[10],2025,Tourtoule,3.9,6.2,729,133,,45.8602323,3.0245421,France,Puy-de-Dôme,FR-63
+[17],2025,Col du Pertuis,3.7,5.1,639,94,4.0,45.3218076,6.147983,France,Isère,FR-38
+[6],2025,Côte de Saint-Michel de-Montjoie,3.7,4.2,323,27,3.0,48.7638020,-1.0267060,France,Manche,FR-50
+[4],2025,Côte Jacques Anquetil,3.6,3.4,126,47,4.0,49.3400262,1.252354,France,Eure,FR-27
+[20],2025,Côte de Thésy,3.5,9.0,678,62,2.0,46.9239012,5.8934599,France,Jura,FR-39
+[10],2025,Col de la Croix Morand,3.5,5.4,1384,41,3.0,45.5970807,2.8508179,France,Puy-de-Dôme,FR-63
+[10],2025,Côte de Berzet,3.4,7.3,808,87,2.0,45.7167164,3.0376784,France,Puy-de-Dôme,FR-63
+[10],2025,Col de Guéry,3.3,6.8,1263,50,2.0,45.6211138,2.8206702,France,Puy-de-Dôme,FR-63
+[12],2025,Col des Bordères,3.3,8.1,1157,35,3.0,42.9516893,-0.1957218,France,Hautes Pyrenees,FR-65
+[10],2025,Le Mont-Dore,3.3,7.7,1288,0,2.0,46.7319309,-0.1992419,France,Deux-Sèvres,FR-79
+[15],2025,Pas du Sant,3.0,9.2,610,52,2.0,43.473423,2.2025885,France,Tarn,FR-81
+[20],2025,Côte de Longeville,2.6,6.0,827,23,4.0,47.0369686,6.5010736,France,Doubs,FR-25
+[3],2025,Mont Cassel,2.3,4.1,155,31,4.0,50.8016641,2.4840511,France,Nord,FR-59
+[6],2025,Côte de la Rançonnière,2.3,7.5,234,145,3,48.9127876,-0.4519524,France,Calvados,FR-14
+[10],2025,Chanat-la-Mouteyre,2.2,5.7,761,128,,45.8302839,3.0152866,France,Puy-de-Dôme,FR-63
+[6],2025,Côte de Juvigny-le-Tertre,2.2,6.6,242,47,3.0,48.6773243,-1.0215195,France,Manche,FR-50
+[1],2025,Le Mont-des-Cats,2.1,3.0,106,56,,51.0142313,2.3078985,France,Nord,FR-59
+[7],2025,Mûr-de-Bretagne,2.0,7.1,280,0,3.0,48.1960984,-2.9826183,France,Côtes-d'Armor,FR-22
+[7],2025,Mûr-de-Bretagne,2.0,7.1,274,16,3.0,48.1960984,-2.9826183,France,Côtes-d'Armor,FR-22
+[4],2025,Côte de la Grand'Mare,1.8,4.8,128,12,4,49.4546213,1.1354010,France,Seine-Maritime,FR-76
+[11],2025,Rebigue,1.8,3.2,246,28,,43.4889644,1.4737057,France,Haute-Garonne,FR-31
+[1],2025,Mont Cassel,1.8,3.8,150,79,4.0,50.8016641,2.4840511,France,Nord,FR-59
+[15],2025,Côte de Saint-Ferréol,1.7,6.2,355,96,3.0,44.5278428,6.4109945,France,Hautes-Alpes,FR-05
+[21],2025,Côte de Bazemont,1.7,6.3,149,122,4.0,48.9229915,1.8721847,France,Yvelines,FR-78
+[11],2025,Vigoulet-Auzil,1.6,4.8,239,21,,43.5073,1.46003,France,Haute-Garonne,FR-31
+[11],2025,Côte de Montgiscard,1.6,4.9,273,45,4.0,43.4580362,1.5744528,France,Haute-Garonne,FR-31
+[10],2025,Col de la Moreno,1.6,6.0,1060,75,,45.7415517,2.9488525,France,Puy-de-Dôme,FR-63
+[6],2025,Côte de Mortain Cote 314,1.6,8.6,288,63,3.0, 48.6471608,-0.9237261,France,Manche,FR-50
+[7],2025,Côte du village de Mûr-de-Bretagne,1.6,3.9,177,18,4.0,48.1960984,-2.9826183,France,Côtes-d'Armor,FR-22
+[11],2025,Côte de Castelnau-d'Estrétefonds,1.5,5.9,203,131,4.0,43.7979127,1.3416208,France,Haute-Garonne,FR-31
+[11],2025,Mervilla,1.4,5.2,277,33,,43.5083,1.47395,France,Haute-Garonne,FR-31
+[11],2025,Côte de Vieille-Toulouse,1.4,6.9,263,14,4.0,43.5260801,1.4455571,France,Haute-Garonne,FR-31
+[7],2025,Côte de Saint Mayeux,1.4,5.5,281,12,3.0,48.2560372,-3.0047984,France,Côtes-d'Armor,FR-22
+[12],2025,Côte de Labatmale,1.3,6.8,466,90,4.0,43.1821847,-0.1537221,France,Pyrénées-Atlantiques,FR-64
+[1],2025,Mont Noir,1.3,6.1,122,44,4.0,50.7788793,2.7328792,France,Nord,FR-59
+[4],2025,Côte de Belbeuf,1.3,9.2,137,28,3.0,49.3868337,1.1367496,France,Seine-Maritime,FR-76
+[2],2025,Côte de Cavron-Saint-Martin,1.2,5.0,83,105,4.0,50.4177070,1.9998341,France,Seine-Maritime,FR-76
+[6],2025,Côte de Vaudry,1.2,7.1,226,4,4.0,48.8404935,-0.8535488,France,Calvados,FR-14
+[2],2025,Côte du Haut Pichot,1.1,9.0,171,29,3.0,50.6142283,1.6852363,France,Pas-de-Calais,FR-62
+[2],2025,Côte de Saint-Étienne-au-Mont,1.1,9.4,87,8,3.0,50.6816857,1.6260428,France,Pas-de-Calais,FR-62
+[21],2025,Côte de la butte Montmartre,1.0,4.8,123,6,4.0,48.8867054,2.3415715,France,Paris,FR-75C
+[21],2025,Côte de la butte Montmartre,1.0,4.8,109,23,4.0,48.8867054,2.3415715,France,Paris,FR-75C
+[21],2025,Côte de la butte Montmartre,1.0,4.8,122,40,4.0,48.8867054,2.3415715,France,Paris,FR-75C
+[1],2025,Côte de Notre-Dame-de-Lorette,1.0,7.3,165,143,4.0,44.3144294,3.0703341,France,Aveyron,FR-12
+[4],2025,Côte de Bonsecours - Stèle Jean Robic,0.9,7.0,140,20,4.0,49.4248221,1.1215633,France,Seine-Maritime,FR-76
+[8],2025,Côte de Nuillé-sur-Vicoin,0.9,3.9,94,17,4.0,47.9849382,-0.7861190,France,Mayenne,FR-53
+[11],2025,Côte de Corronsac,0.9,6.9,250,40,4.0,43.4735378,1.4952075,France,Haute-Garonne,FR-31
+[2],2025,Côte d'Outreau,0.8,8.0,80,5,4.0,50.6944418,1.5777294,France,Pas-de-Calais,FR-62
+[4],2025,Rampe Saint-Hilaire,0.8,9.4,134,5,4.0,49.446252,1.1072048,France,Seine-Maritime,FR-76
+[11],2025,Côte de Pech David,0.8,9.8,240,9,3.0,43.5612298,1.4476653,France,Haute-Garonne,FR-31
+[6],2025,Vire,0.75,8.9,166,11,,48.8385198,-0.8893293,France,Calvados,FR-14
+[21],2025,Côte du Pavé des Gardes,0.7,7.7,169,86,4.0,48.80891205998497, 2.2014237760798485,France,Hauts-de-Seine,FR-92
